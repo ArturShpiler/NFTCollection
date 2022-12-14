@@ -1,0 +1,5 @@
+@mixin calcSize($property, $maxSize, $minSize, $maxSource, $minSource) {
+	#{$property}: calc(
+		#{$minSize + px} + (#{$maxSize - $minSize}) * ((100vw - #{$minSource + px}) / (#{$maxSource - $minSource}))
+	);
+}
